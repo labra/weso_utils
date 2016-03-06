@@ -4,6 +4,9 @@ import org.slf4j._
 import org.apache.log4j._
 import scala.collection.JavaConversions._ 
 
+/**
+ * Trait for things that can log
+ */
 trait Logging {
   
   lazy val log = LogManager.getRootLogger
@@ -49,8 +52,3 @@ trait Logging {
 
 }
 
-object Logging {
-  
-  
-  
-}

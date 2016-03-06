@@ -7,7 +7,9 @@ import org.scalactic.{
 
 /**
  * Checker of values of type +A with possible errors of type E
- * This is a facade to abstract on alternative implementations using:
+ * This is a facade 
+ * 
+ * Alternative implementations could be done using:
  * - scalaz (Validation)
  * - cats (Validated)
  *  

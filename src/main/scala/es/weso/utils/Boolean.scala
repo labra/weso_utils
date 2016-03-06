@@ -1,5 +1,10 @@
 package es.weso.utils
 
+/**
+ * Very common utils on booleans
+ * 
+ * These functions are probably implemented elsewhere
+ */
 object Boolean {
   
 def all(vs: Traversable[Boolean]): Boolean = {

@@ -2,8 +2,15 @@ package es.weso.utils
 
 import argonaut._, Argonaut._
 
+/*
+ * Obtains a diff between 2 Jsons 
+ */
 object JsonDiff {
     
+  /**
+   * Obtains a diff between 2 Jsons
+   * 
+   */
   def diff(json1:Json, json2: Json): String = {
     diff(json1,json2,0)
   }

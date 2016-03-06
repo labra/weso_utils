@@ -7,7 +7,7 @@ organization := "es.weso"
 
 name := "weso_utils"
 
-version := "0.0.1"
+version := "0.0.3"
 
 scalaVersion := "2.11.7"
 
@@ -20,8 +20,8 @@ libraryDependencies ++= Seq(
   , "com.typesafe" % "config" % "1.0.1"
   , "junit" % "junit" % "4.10" % "test"
   , "org.scalactic" % "scalactic_2.11" % "2.2.4"
-  , "org.scalatest" % "scalatest_2.11" % "2.2.4" % "test"
-  , "org.scalacheck" %% "scalacheck" % "1.12.4" % "test"
+  , "org.scalatest" % "scalatest_2.11" % "2.2.4" 
+  , "org.scalacheck" %% "scalacheck" % "1.12.4" 
   , "log4j" % "log4j" % "1.2.17"
   , "org.slf4j" % "slf4j-simple" % "1.6.4"
   )

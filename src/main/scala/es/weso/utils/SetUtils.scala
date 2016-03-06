@@ -2,13 +2,18 @@ package es.weso.utils
 
 import scala.annotation.tailrec
 
-
+/**
+ * Utils on sets
+ */
 object SetUtils {
- /* pSet s generates the power set of s, pairing each subset with its complement.
-     e.g. pSet [1,2] = [([1,2],[]),([1],[2]),([2],[1]),([],[1,2])].
+ /* 
  */
 
-  /* Tail recursive pSet */
+  /**
+   * Power of a set (Tail recursive implementation)
+   * `pSet s` generates the power set of `s`, pairing each subset with its complement.
+     e.g. `pSet [1,2] = [([1,2],[]),([1],[2]),([2],[1]),([],[1,2])].`  
+   */
   def pSet[A](set: Set[A]): Stream[(Set[A], Set[A])] = {
 
     @annotation.tailrec
@@ -23,15 +28,17 @@ object SetUtils {
     pSetRec(set, Stream((Set(), Set())))
   }
 
-  def addFirst[A](x: A)(pair: (Set[A], Set[A])): (Set[A], Set[A]) = {
+  private def addFirst[A](x: A)(pair: (Set[A], Set[A])): (Set[A], Set[A]) = {
     (pair._1 + x, pair._2)
   }
 
-  def addSecond[A](x: A)(pair: (Set[A], Set[A])): (Set[A], Set[A]) = {
+  private def addSecond[A](x: A)(pair: (Set[A], Set[A])): (Set[A], Set[A]) = {
     (pair._1, pair._2 + x)
   }
  
-  // TODO: Refactor to be tail recursive
+  /** decompose a set 
+   *  TODO: Refactor to be tail recursive
+   */
   def decompose[A](set: Set[A], n: Int): Stream[List[Set[A]]] = {
     n match {
       case 1 => Stream(List(set))

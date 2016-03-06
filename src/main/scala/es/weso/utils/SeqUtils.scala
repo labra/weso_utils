@@ -3,6 +3,11 @@ package es.weso.utils
 import scala.annotation.tailrec
 
 
+/**
+ * Some utils on Sequences
+ * 
+ * TODO: Search for more elegant ways to define these methods
+ */
 object SeqUtils {
 
   /**
