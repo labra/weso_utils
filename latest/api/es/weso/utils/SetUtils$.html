@@ -49,7 +49,8 @@
       </span>
       </h4>
       
-          <div id="comment" class="fullcommenttop"><div class="toggleContainer block">
+          <div id="comment" class="fullcommenttop"><div class="comment cmt"><p>Utils on sets
+</p></div><div class="toggleContainer block">
           <span class="toggle">Linear Supertypes</span>
           <div class="superTypes hiddenContent"><span class="extype" name="scala.AnyRef">AnyRef</span>, <span class="extype" name="scala.Any">Any</span></div>
         </div></div>
@@ -145,40 +146,6 @@
       </a>
     </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
-    </li><li name="es.weso.utils.SetUtils#addFirst" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="addFirst[A](x:A)(pair:(Set[A],Set[A])):(Set[A],Set[A])"></a>
-      <a id="addFirst[A](A)((Set[A],Set[A])):(Set[A],Set[A])"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">addFirst</span><span class="tparams">[<span name="A">A</span>]</span><span class="params">(<span name="x">x: <span class="extype" name="es.weso.utils.SetUtils.addFirst.A">A</span></span>)</span><span class="params">(<span name="pair">pair: (<span class="extype" name="scala.Predef.Set">Set</span>[<span class="extype" name="es.weso.utils.SetUtils.addFirst.A">A</span>], <span class="extype" name="scala.Predef.Set">Set</span>[<span class="extype" name="es.weso.utils.SetUtils.addFirst.A">A</span>])</span>)</span><span class="result">: (<span class="extype" name="scala.Predef.Set">Set</span>[<span class="extype" name="es.weso.utils.SetUtils.addFirst.A">A</span>], <span class="extype" name="scala.Predef.Set">Set</span>[<span class="extype" name="es.weso.utils.SetUtils.addFirst.A">A</span>])</span>
-      </span>
-      </h4><span class="permalink">
-      <a href="../../../index.html#es.weso.utils.SetUtils$@addFirst[A](x:A)(pair:(Set[A],Set[A])):(Set[A],Set[A])" title="Permalink" target="_top">
-        <img src="../../../lib/permalink.png" alt="Permalink" />
-      </a>
-    </span>
-      
-    </li><li name="es.weso.utils.SetUtils#addSecond" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="addSecond[A](x:A)(pair:(Set[A],Set[A])):(Set[A],Set[A])"></a>
-      <a id="addSecond[A](A)((Set[A],Set[A])):(Set[A],Set[A])"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">addSecond</span><span class="tparams">[<span name="A">A</span>]</span><span class="params">(<span name="x">x: <span class="extype" name="es.weso.utils.SetUtils.addSecond.A">A</span></span>)</span><span class="params">(<span name="pair">pair: (<span class="extype" name="scala.Predef.Set">Set</span>[<span class="extype" name="es.weso.utils.SetUtils.addSecond.A">A</span>], <span class="extype" name="scala.Predef.Set">Set</span>[<span class="extype" name="es.weso.utils.SetUtils.addSecond.A">A</span>])</span>)</span><span class="result">: (<span class="extype" name="scala.Predef.Set">Set</span>[<span class="extype" name="es.weso.utils.SetUtils.addSecond.A">A</span>], <span class="extype" name="scala.Predef.Set">Set</span>[<span class="extype" name="es.weso.utils.SetUtils.addSecond.A">A</span>])</span>
-      </span>
-      </h4><span class="permalink">
-      <a href="../../../index.html#es.weso.utils.SetUtils$@addSecond[A](x:A)(pair:(Set[A],Set[A])):(Set[A],Set[A])" title="Permalink" target="_top">
-        <img src="../../../lib/permalink.png" alt="Permalink" />
-      </a>
-    </span>
-      
     </li><li name="scala.Any#asInstanceOf" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="asInstanceOf[T0]:T0"></a>
       <a id="asInstanceOf[T0]:T0"></a>
@@ -235,7 +202,9 @@
         <img src="../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
-      
+      <p class="shortcomment cmt">decompose a set
+ TODO: Refactor to be tail recursive
+</p>
     </li><li name="scala.AnyRef#eq" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="eq(x$1:AnyRef):Boolean"></a>
       <a id="eq(AnyRef):Boolean"></a>
@@ -395,7 +364,7 @@
       </a>
     </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
-    </li><li name="es.weso.utils.SetUtils#pSet" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+    </li><li name="es.weso.utils.SetUtils#pSet" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="pSet[A](set:Set[A]):Stream[(Set[A],Set[A])]"></a>
       <a id="pSet[A](Set[A]):Stream[(Set[A],Set[A])]"></a>
       <h4 class="signature">
@@ -411,7 +380,11 @@
         <img src="../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
-      
+      <p class="shortcomment cmt">Power of a set (Tail recursive implementation)
+<code>pSet s</code> generates the power set of <code>s</code>, pairing each subset with its complement.</p><div class="fullcomment"><div class="comment cmt"><p>Power of a set (Tail recursive implementation)
+<code>pSet s</code> generates the power set of <code>s</code>, pairing each subset with its complement.
+     e.g. <code>pSet [1,2] = [([1,2],[]),([1],[2]),([2],[1]),([],[1,2])].</code>
+</p></div></div>
     </li><li name="scala.AnyRef#synchronized" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="synchronized[T0](x$1:=&gt;T0):T0"></a>
       <a id="synchronized[T0](⇒T0):T0"></a>
