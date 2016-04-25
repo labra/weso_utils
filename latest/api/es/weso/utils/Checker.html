@@ -47,7 +47,7 @@
         <span class="kind">case class</span>
       </span>
       <span class="symbol">
-        <span class="name">Checker</span><span class="tparams">[<span name="A">+A</span>, <span name="E">+E</span>]</span><span class="params">(<span name="value">value: <span class="extype" name="org.scalactic.Or">Or</span>[<span class="extype" name="es.weso.utils.Checker.A">A</span>, <span class="extype" name="org.scalactic.Every">Every</span>[<span class="extype" name="es.weso.utils.Checker.E">E</span>]]</span>)</span><span class="result"> extends <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+        <span class="name">Checker</span><span class="tparams">[<span name="A">+A</span>, <span name="E">+E</span>]</span><span class="result"> extends <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
       </span>
       </h4>
       
@@ -91,27 +91,7 @@ This is a facade</p><p>Alternative implementations could be done using:
 
       <div id="template">
         <div id="allMembers">
-        <div id="constructors" class="members">
-              <h3>Instance Constructors</h3>
-              <ol><li name="es.weso.utils.Checker#&lt;init&gt;" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="&lt;init&gt;(value:org.scalactic.Or[A,org.scalactic.Every[E]]):es.weso.utils.Checker[A,E]"></a>
-      <a id="&lt;init&gt;:Checker[A,E]"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">new</span>
-      </span>
-      <span class="symbol">
-        <span class="name">Checker</span><span class="params">(<span name="value">value: <span class="extype" name="org.scalactic.Or">Or</span>[<span class="extype" name="es.weso.utils.Checker.A">A</span>, <span class="extype" name="org.scalactic.Every">Every</span>[<span class="extype" name="es.weso.utils.Checker.E">E</span>]]</span>)</span>
-      </span>
-      </h4><span class="permalink">
-      <a href="../../../index.html#es.weso.utils.Checker@&lt;init&gt;(value:org.scalactic.Or[A,org.scalactic.Every[E]]):es.weso.utils.Checker[A,E]" title="Permalink" target="_top">
-        <img src="../../../lib/permalink.png" alt="Permalink" />
-      </a>
-    </span>
-      
-    </li></ol>
-            </div>
+        
 
         
 
@@ -170,6 +150,41 @@ This is a facade</p><p>Alternative implementations could be done using:
       </a>
     </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li name="es.weso.utils.Checker#addError" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="addError[E1&gt;:E](e:E1):es.weso.utils.Checker[A,E1]"></a>
+      <a id="addError[E1&gt;:E](E1):Checker[A,E1]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">addError</span><span class="tparams">[<span name="E1">E1 &gt;: <span class="extype" name="es.weso.utils.Checker.E">E</span></span>]</span><span class="params">(<span name="e">e: <span class="extype" name="es.weso.utils.Checker.addError.E1">E1</span></span>)</span><span class="result">: <a href="" class="extype" name="es.weso.utils.Checker">Checker</a>[<span class="extype" name="es.weso.utils.Checker.A">A</span>, <span class="extype" name="es.weso.utils.Checker.addError.E1">E1</span>]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#es.weso.utils.Checker@addError[E1&gt;:E](e:E1):es.weso.utils.Checker[A,E1]" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">Adds an Error to a Checker.</p><div class="fullcomment"><div class="comment cmt"><p>Adds an Error to a Checker.</p></div><dl class="paramcmts block"><dt class="param">e</dt><dd class="cmt"><p>error to add</p></dd><dt>returns</dt><dd class="cmt"><p>If the value was ok, converts it into an error with the value <code>e</code>,
+					otherwise, adds the error to the list of errors</p></dd></dl></div>
+    </li><li name="es.weso.utils.Checker#addErrors" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="addErrors[E1&gt;:E](es:Seq[E1]):es.weso.utils.Checker[A,E1]"></a>
+      <a id="addErrors[E1&gt;:E](Seq[E1]):Checker[A,E1]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">addErrors</span><span class="tparams">[<span name="E1">E1 &gt;: <span class="extype" name="es.weso.utils.Checker.E">E</span></span>]</span><span class="params">(<span name="es">es: <span class="extype" name="scala.Seq">Seq</span>[<span class="extype" name="es.weso.utils.Checker.addErrors.E1">E1</span>]</span>)</span><span class="result">: <a href="" class="extype" name="es.weso.utils.Checker">Checker</a>[<span class="extype" name="es.weso.utils.Checker.A">A</span>, <span class="extype" name="es.weso.utils.Checker.addErrors.E1">E1</span>]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#es.weso.utils.Checker@addErrors[E1&gt;:E](es:Seq[E1]):es.weso.utils.Checker[A,E1]" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">Adds a list of errors to a Checker</p><div class="fullcomment"><div class="comment cmt"><p>Adds a list of errors to a Checker</p></div><dl class="paramcmts block"><dt class="param">es</dt><dd class="cmt"><p>list of errors to add</p></dd><dt>returns</dt><dd class="cmt"><p>a checker with the list of errors es</p></dd></dl></div>
     </li><li name="scala.Any#asInstanceOf" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="asInstanceOf[T0]:T0"></a>
       <a id="asInstanceOf[T0]:T0"></a>
@@ -227,6 +242,24 @@ This is a facade</p><p>Alternative implementations could be done using:
       </a>
     </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li name="es.weso.utils.Checker#errors" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="errors:Seq[E]"></a>
+      <a id="errors:Seq[E]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">errors</span><span class="result">: <span class="extype" name="scala.Seq">Seq</span>[<span class="extype" name="es.weso.utils.Checker.E">E</span>]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#es.weso.utils.Checker@errors:Seq[E]" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">Returns the list of errors of this checker</p><div class="fullcomment"><div class="comment cmt"><p>Returns the list of errors of this checker</p><p> If the checker is ok, the list will be empty
+</p></div></div>
     </li><li name="scala.AnyRef#finalize" visbl="prt" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="finalize():Unit"></a>
       <a id="finalize():Unit"></a>
@@ -250,7 +283,7 @@ This is a facade</p><p>Alternative implementations could be done using:
     </span>)</span>
               
         </dd></dl></div>
-    </li><li name="es.weso.utils.Checker#fold" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+    </li><li name="es.weso.utils.Checker#fold" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="fold[V](ok:A=&gt;V,err:Seq[E]=&gt;V):V"></a>
       <a id="fold[V]((A)⇒V,(Seq[E])⇒V):V"></a>
       <h4 class="signature">
@@ -266,7 +299,7 @@ This is a facade</p><p>Alternative implementations could be done using:
         <img src="../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
-      
+      <p class="shortcomment cmt">Fold this checker into another value</p><div class="fullcomment"><div class="comment cmt"><p>Fold this checker into another value</p></div><dl class="paramcmts block"><dt class="tparam">V</dt><dd class="cmt"><p>the result type</p></dd><dt class="param">ok</dt><dd class="cmt"><p>function to apply to the value</p></dd><dt class="param">err</dt><dd class="cmt"><p>function to apply to the sequence of errors</p></dd><dt>returns</dt><dd class="cmt"><p>the result of applying either the <code>ok</code> function or the <code>err</code> function</p></dd></dl></div>
     </li><li name="scala.AnyRef#getClass" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="getClass():Class[_]"></a>
       <a id="getClass():Class[_]"></a>
@@ -301,7 +334,7 @@ This is a facade</p><p>Alternative implementations could be done using:
       </a>
     </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
-    </li><li name="es.weso.utils.Checker#isOK" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+    </li><li name="es.weso.utils.Checker#isOK" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="isOK:Boolean"></a>
       <a id="isOK:Boolean"></a>
       <h4 class="signature">
@@ -317,8 +350,8 @@ This is a facade</p><p>Alternative implementations could be done using:
         <img src="../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
-      
-    </li><li name="es.weso.utils.Checker#map" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <p class="shortcomment cmt"></p><div class="fullcomment"><div class="comment cmt"></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p><code>true</code> if the value has no errors</p></dd></dl></div>
+    </li><li name="es.weso.utils.Checker#map" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="map[B](f:A=&gt;B):es.weso.utils.Checker[B,E]"></a>
       <a id="map[B]((A)⇒B):Checker[B,E]"></a>
       <h4 class="signature">
@@ -334,7 +367,7 @@ This is a facade</p><p>Alternative implementations could be done using:
         <img src="../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
-      
+      <p class="shortcomment cmt">Build a new Checker by applying a function to the value</p><div class="fullcomment"><div class="comment cmt"><p>Build a new Checker by applying a function to the value</p></div><dl class="paramcmts block"><dt class="tparam">B</dt><dd class="cmt"><p>the value type of the new Checker</p></dd><dt class="param">f</dt><dd class="cmt"><p>the function to apply to the current value</p></dd><dt>returns</dt><dd class="cmt"><p>a new Checker with the new value or the list of existing errors</p></dd></dl></div>
     </li><li name="scala.AnyRef#ne" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="ne(x$1:AnyRef):Boolean"></a>
       <a id="ne(AnyRef):Boolean"></a>
