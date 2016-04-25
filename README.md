@@ -9,7 +9,7 @@ Common utilities in Scala
 Links
 =====
 
-* [More info](http://labra.github.io/wesin)
+* [More info](http://labra.github.io/weso_utils)
 
 Author
 ======

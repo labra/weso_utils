@@ -7,7 +7,7 @@ organization := "es.weso"
 
 name := "weso_utils"
 
-version := "0.0.3"
+version := "0.0.5"
 
 scalaVersion := "2.11.7"
 
@@ -17,6 +17,7 @@ libraryDependencies ++= Seq(
     "commons-configuration" % "commons-configuration" % "1.7"
   , "org.scala-lang" % "scala-compiler" % scalaVersion.value 
   , "io.argonaut" %% "argonaut" % "6.1"
+  , "jline" % "jline" % "2.12.1"
   , "com.typesafe" % "config" % "1.0.1"
   , "junit" % "junit" % "4.10" % "test"
   , "org.scalactic" % "scalactic_2.11" % "2.2.4"
