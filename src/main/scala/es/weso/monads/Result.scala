@@ -5,7 +5,7 @@ import util.Success
 import util.Try
 import es.weso.utils.SetUtils
 import io.StdIn._ 
-import jline.console._
+// import jline.console._
 
 
 /**
@@ -135,7 +135,7 @@ object Result {
   
   var interactive = true
   var traceOn = false
-  val console = new ConsoleReader()
+//  val console = new ConsoleReader()
 
   def unit[A](x: A): Result[A] = Passed(Stream(x))
 
@@ -157,6 +157,10 @@ object Result {
     }
   }
 
+  /**
+   * Takes a list of values and an evaluation function and combines the results
+   * obtained from the evaluation  
+   */
   def combineAll[A, B](
     ls: List[A],
     eval: A => Result[B],
@@ -207,7 +211,7 @@ object Result {
   def trace(msg:String): Result[Boolean] = {
     if (traceOn) {
       println("\nTrace: " + msg)
-      if (interactive) {
+/*      if (interactive) {
         println("\nAction? (n = next, r = resume):")
         val next = console.readCharacter()
         next match {
@@ -220,7 +224,7 @@ object Result {
       } 
     }
     else
-      unit(true)
+*/      unit(true) 
     } else
       unit(false)
   }

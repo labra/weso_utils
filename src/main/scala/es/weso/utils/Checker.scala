@@ -10,8 +10,8 @@ import org.scalactic.{
  * This is a facade 
  * 
  * Alternative implementations could be done using:
- * - scalaz (Validation)
- * - cats (Validated)
+ * <p> scalaz (Validation)
+ * <p> cats (Validated)
  *  
  */
 case class Checker[+A,+E] private(value: A SOr Every[E]){

@@ -1,15 +1,15 @@
 import sbt._
 import sbt.Keys._
 
-lazy val root = project.in(file("."))
+lazy val weso_utils = project.in(file("."))
 
 organization := "es.weso"
 
 name := "weso_utils"
 
-version := "0.0.5"
+version := "0.0.7"
 
-scalaVersion := "2.11.7"
+scalaVersion := "2.11.8"
 
 publishMavenStyle := true
 
@@ -23,8 +23,8 @@ libraryDependencies ++= Seq(
   , "org.scalactic" % "scalactic_2.11" % "2.2.4"
   , "org.scalatest" % "scalatest_2.11" % "2.2.4" 
   , "org.scalacheck" %% "scalacheck" % "1.12.4" 
-  , "log4j" % "log4j" % "1.2.17"
-  , "org.slf4j" % "slf4j-simple" % "1.6.4"
+  , "ch.qos.logback" %  "logback-classic" % "1.1.7"
+  , "com.typesafe.scala-logging" %% "scala-logging" % "3.4.0"
   )
 
 // scalariformSettings

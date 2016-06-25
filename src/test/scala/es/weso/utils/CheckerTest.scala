@@ -1,12 +1,10 @@
 package es.weso.utils
 
 import org.scalatest._
-import org.scalatest.prop.PropertyChecks
-import org.scalatest.prop.Checkers
 import SeqUtils._
 import Checker._
 
-class CheckerTest extends FunSpec with Matchers with Checkers {
+class CheckerTest extends FunSpec with Matchers {
 
   describe("Checker") {
     
